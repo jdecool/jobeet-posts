@@ -25,7 +25,7 @@ une série de billets consacrés à l'adaption du tutorial pour Symfony 4.
 Vous trouverez donc ici, au fur et à mesure de l'écriture des différents billets,
 les liens vers les nouveaux articles dont le sommaire se trouve ci-dessous :
 
-* Tutorial Jobeet pour Symfony 4 - Partie 1: Démarrage du projet
+* [Tutorial Jobeet pour Symfony 4 - Partie 1: Démarrage du projet]({% post_url 2017-09-13-tutorial-jobeet-symfony-4-partie-1-demarrage-projet %})
 * Tutorial Jobeet pour Symfony 4 - Partie 2: Le projet
 * Tutorial Jobeet pour Symfony 4 - Partie 3: Le modèle de données
 * Tutorial Jobeet pour Symfony 4 - Partie 4: Le contrôleur et la vue
