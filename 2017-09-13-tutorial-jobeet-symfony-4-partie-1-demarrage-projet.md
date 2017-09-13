@@ -108,13 +108,13 @@ je vous recommande vivement de vous renseigner sur ce dernier).
 {% img jobeet-serve.png %}
 
 Par défaut, le framework utilise le serveur Web embarqué avec PHP (ce qui peut
-être suffisant pour des besoins de développement). Symfonyfournit également un
+être suffisant pour des besoins de développement). Symfony fournit également un
 bundle `symfonyweb-server-bundle` (nous reviendrons plus tard sur la notion de
 bundle) permettant d'apporter une meilleure expérience développeur pour manipuler
 ce dernier.
 
 Une fois le serveur démarré, nous pouvons nous connecter sur notre projet en ouvrant
-un navigateur et en tapant l'URL <a href="http://localhost:8000" target="_blank" rel="nofollow">localost:8000</a>.
+un navigateur et en tapant l'URL <a href="http://localhost:8000" target="_blank" rel="nofollow">localhost:8000</a>.
 Bien entendu, comme nous n'avons encore rien fait, une page d'erreur sera affichée.
 
 {% imgFull jobeet-homepage.png %}
