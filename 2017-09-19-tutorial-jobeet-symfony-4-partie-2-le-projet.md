@@ -43,7 +43,7 @@ Nous allons maintenant lister les exigences fonctionnelles de notre application.
 Ces dernières seront numérotés et débuteront par un `F` pour les aspects frontend
 et par un `B` pour les aspects backend.
 
-### F1: En tant qu'utilisateur, je vois dernières offres actives sur la page d'accueil
+### F1: En tant qu'utilisateur, je vois les dernières offres actives sur la page d'accueil
 
 Quand un utilisateur vient sur le site Jobeet, il voit une liste des emplois actifs.
 Les emplois sont classés par catégorie, puis par date de publication (emplois plus
@@ -114,7 +114,7 @@ le jeton de sa filiale. La liste peut être retournée en XML, JSON ou YAML.
 La liste contient les informations publiques disponibles pour un emploi.
 
 L'affilié peut également limiter le nombre d'emplois qui seront retournés,
-et d'affiner sa requête en spécifiant une catégorie.
+et affiner sa requête en spécifiant une catégorie.
 
 ### B1: En tant qu'administrateur, je peux configurer le site
 
