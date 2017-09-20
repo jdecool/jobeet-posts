@@ -146,7 +146,7 @@ installé et activé. Nous allons ensuite modifier la variable d'environnement
 DATABASE_URL="sqlite:///var/jobeet.db"
 {% endhighlight %}
 
-> Notons que l'exemple de configuration pour SQLite fait référénce un paramètre
+> Notons que l'exemple de configuration pour SQLite fait référénce à un paramètre
 > `kernel.project_dir` définit par le framework (reconnaissable parce qu'elle est
 > entourée du caractère `%`). Cette variable est censée faire référence à la racine
 > de notre dossier de code. Mais cette dernière ne semble pas prise en compte lors
@@ -229,7 +229,7 @@ class Category
 
 Maintenant passons à la table `job`. Un emploi étant lié à une catégorie, notre
 table contient une clé étrangère vers la catégorie associée. Dans notre entité,
-cette information va se modéliser sous la forme d'une propriété qui dont la valeur
+cette information va se modéliser sous la forme d'une propriété dont la valeur
 sera une instance de l'entité associée à la table catégorie (donc un objet
 `Category`).
 
@@ -268,7 +268,7 @@ d'association pour gérer cette information (il s'agit de la table `CategoryAffi
 
 Puisque nous avons dit qu'une table de notre base de données correspondait à un
 objet PHP, il devrait donc être nécessaire de créer deux nouveaux objets pour
-gérer cette relation. Mais réalité cette table ne sert qu'à modéliser le fait
+gérer cette relation. Mais en réalité cette table ne sert qu'à modéliser le fait
 qu'un objet `Affialite` est rattaché à plusieurs objets `Category` et vice-versa.
 Donc d'un point de vue programmation, un objet `Affiliate` devrait avoir une 
 propriété `$categories` qui correspond à un tableau d'objet `Affiliate` et l'entité
@@ -276,7 +276,7 @@ propriété `$categories` qui correspond à un tableau d'objet `Affiliate` et l'
 
 Notre ORM est tout à fait capable de gérer cette problématique. Nous allons donc
 créer notre objet `Affiliate` avec une propriété `$categories` que nous ferons
-correspondre à un tableau d'objet `Category` et Doctrine gérer de manière automatique
+correspondre à un tableau d'objet `Category`. Doctrine gérera de manière automatique
 et transparente notre table d'association.
 
 > S'il avait été nécessaire de gérer des informations additionnelles, telles
@@ -341,10 +341,10 @@ class Category
 {% endhighlight %}
 
 Il est maintenant temps d'indiquer à Doctrine comment l'ORM va pouvoir faire le
-lien etre nos entités et les tables de la base de données. Pour cela, et comme
+lien entre nos entités et les tables de la base de données. Pour cela, et comme
 nous l'avons spécifié précédement, nous allons placer des fichiers de configuration
-dans le dossier `config/doctrine/mapping`. Tout comme pour l'écrire des classes,
-nous allons écrire un fichier de configuration par entité en suivant la convention
+dans le dossier `config/doctrine/mapping`. Tout comme pour l'écriture des classes,
+nous allons créer un fichier de configuration par entité en suivant la convention
 `NomDeLaClasse.orm.yml`.
 
 Les fichiers de configuration vont permettre d'indiquer à quelle table correspondent
