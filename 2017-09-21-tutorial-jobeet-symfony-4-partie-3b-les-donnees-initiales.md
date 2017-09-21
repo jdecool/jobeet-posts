@@ -6,31 +6,31 @@ priority: 0.80
 type: jobeet
 ---
 
-Nous avons donc créé notre base et données avec les tables qui permettrons de
+Nous avons donc créé notre base et données avec les tables qui permettront de
 stocker les informations que notre application va manipuler. Avant de commencer
 l'implémentation des fonctionnalités évoquées dans les billets précédents, nous
 allons commencer par insérer un jeu de données initiales (également appelées
 **fixtures**) afin de ne pas démarrer avec un projet vide.
 
-Pour créer nos données, nous allons utiliser un bundle également fourni par les
-équipes de Doctrine et qui propose un moyen de charger des données en base. Nous
-avions jusqu'à maintenant utilisé uniquement des modules officiels de Symfony.
-Le bundle que nous allons utiliser (`DoctrineFixturesBundle`) est un module non
+Pour créer nos données, nous allons utiliser un bundle fourni par les équipes
+de Doctrine et qui propose un moyen de charger des données en base. Nous avions
+jusqu'à maintenant utilisé uniquement des modules officiels de Symfony. Le
+bundle que nous allons utiliser (`DoctrineFixturesBundle`) est un module non
 officiel de Symfony. Or, par défaut, Symfony Flex ne permet de ne travailler
 qu'avec les bundles officiels de Symfony.
 
-Il est néanmoins possible d'utiliser Flex avec des bundles, mais il sera nécessaire
-de le spécifier explicitement dans la configuration de ce dernier. Pour cela, nous
-allons modifier la valeur du paramètre `allow-contrib` présent dans notre fichier
-`composer.json` au travers de la commande suivante :
+Il est néanmoins possible d'utiliser Flex avec ces bundles, mais il sera nécessaire
+de le spécifier explicitement dans la configuration. Pour cela, nous allons modifier
+la valeur du paramètre `allow-contrib` présent dans notre fichier `composer.json`
+au travers de la commande suivante :
 
 {% highlight bash %}
 $ composer config extra.symfony.allow-contrib true
 {% endhighlight %}
 
-Il est maintenant possible de télécharger la dépendance. Cette dernière n'étant
-utile que pour du développement, nous allons l'installer comme une dépendance
-de développement :
+Une fois effectué, il sera possible de télécharger la dépendance. Cette dernière
+n'étant utilisée qu'en développement, nous allons utiliser l'option `--dev` de
+Composer afin de l'installer comme tel :
 
 {% highlight bash %}
 $ composer require doctrine/doctrine-fixtures-bundle --dev
@@ -65,14 +65,14 @@ de nos propriétés.
 > configuration du bundle par défaut.
 
 Si vous avez eu la curiosité de regarder la liste des commandes proposées par le
-bundle Doctrine, vous aurrez peut-être remarqué qu'il existe une commande
+bundle Doctrine, vous aurez peut-être remarqué qu'il existe une commande
 `doctrine:generate:entities` dont le rôle est justement de remplir cette tâche.
 
 Notre projet suit la convention {% ext PSR-4| http://www.php-fig.org/psr/psr-4 %}
 décrivant la norme sur le chargement des fichiers PHP en fonction de leur arborescence
 (appelée {% ext autoloading|http://php.net/autoload %}). Malheureusement, le
 générateur de Doctrine n'est actuellement pas compatible avec cette norme (et ce
-n'est pas en projet).
+n'est pas en prévu à court ou moyen terme).
 
 Mais cela n'est pas un problème étant donnée que la plupart des outils de développement
 (tel que PHPStorm, Netbeans, Eclipse, Sublime Text, Atom, VSCode, ...) ont une
@@ -86,11 +86,11 @@ nos entités ainsi que les méthodes `set` associées, à l'exception des propri
 données).
 
 > Si vous souhaitez gagner du temps, vous pouvez accéder au code source correspondant
-> à ce billet sur {% ext Github|https://github.com/jdecool/jobeet/tree/04-donnes-initiales %}
+> à ce billet sur {% ext Github|https://github.com/jdecool/jobeet/tree/03b-donnees-initiales %}
 > pour copier/coller les méthodes décrites ci-dessus.
 
 Nous pouvons maintenant commencer à écrire nos fixtures, c'est-à-dire les classes
-qui vont s'occuper de la création notre jeu de données initial. Nous allons
+qui vont s'occuper de la création notre jeu de données initiales. Nous allons
 commencer par créer des catégories d'offre d'emploi en créant une classe
 `LoadCategoryData` dans le dossier `src/DataFixtures/ORM` :
 
@@ -148,21 +148,22 @@ de la méthode `getOrder()`.
 
 Le chargement des données se fait au sein d'une méthode `load(ObjectManager $manager)`.
 Il s'agit de la méthode appelée lorsque les données doivent être insérées. Cette
-méthode prend en paramètre un objet de type `ObjectManager` qui est l'objet de
-Doctrine qui permet de travailler avec la base de données.
+méthode prend en paramètre un objet de type `ObjectManager` qui est l'objet Doctrine
+qui permet de travailler avec la base de données.
 
 Ce dernier permet d'appeler la méthode `persist` pour indiquer à Doctrine que
 nous souhaitons persister un objet en base. Pour que la donnée soit réellement
-écriture en base on utilise un appel à la méthode `flush`. Dans le cas où l'on
+écrite en base, on utilise un appel à la méthode `flush`. Dans le cas où l'on
 fait plusieurs appels à la méthode `persist` (comme c'est le cas ici) et qu'ensuite
 on `flush`, les insertions en bases sont réalisés au sein d'une transaction.
 
 Une fois les données enregistrées, nous souhaitons les rendre accessibles depuis
 nos autres fixtures pour par exemple pouvoir affecter une catégorie à une offre
 d'emploi. Pour cela, nous allons définir explicitement les objets auxquels nous
-souhaitons accéder en appelant la méthode `addReference`.
+souhaitons accéder en appelant la méthode `addReference` et en associant une clé
+à notre donnée.
 
-Nous pouvons ensuite passer à notre fixture suivante :
+Nous pouvons ensuite passer à la fixture suivante :
 
 {% highlight php %}
 <?php  //src/DataFixtures/ORM/LoadJobData.php
