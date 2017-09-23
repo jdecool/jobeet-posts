@@ -152,6 +152,12 @@ DATABASE_URL="sqlite:///var/jobeet.db"
 > de notre dossier de code. Mais cette dernière ne semble pas prise en compte lors
 > de l'écriture de ce billet et nous avons donc utilisé un chemin relatif.
 
+> *Mise à jour du 23/09/2017 :* En parcourant le projet sur Github, j'ai trouvé
+> l'{% ext issue concernant ce problème|https://github.com/symfony/flex/issues/129 %}
+> ainsi que {% ext sa résolution|https://github.com/symfony/symfony/pull/23901 %}.
+> Tout devrait rentrer dans l'ordre lors de la publication de la branche 3.4 du
+> projet.
+
 Le dossier `var` qui a été créé lors de la mise en place de Doctrine est, par
 convention, un dossier qui va contenir les fichiers écrits par notre application
 durant son fonctionnement (tel que des logs, des fichiers de cache, ...). C'est
