@@ -29,7 +29,8 @@ les liens vers les nouveaux articles dont le sommaire se trouve ci-dessous :
 * [Tutorial Jobeet pour Symfony 4 - Partie 2: Le projet]({% post_url 2017-09-19-tutorial-jobeet-symfony-4-partie-2-le-projet %})
 * [Tutorial Jobeet pour Symfony 4 - Partie 3A: Le modèle de données]({% post_url 2017-09-20-tutorial-jobeet-symfony-4-partie-3a-le-modele-de-donnees %})
 * [Tutorial Jobeet pour Symfony 4 - Partie 3B: Les données initiales]({% post_url 2017-09-21-tutorial-jobeet-symfony-4-partie-3b-les-donnees-initiales %})
-* [Tutorial Jobeet pour Symfony 4 - Partie 4: Le contrôleur et la vue]({% post_url 2017-09-29-tutorial-jobeet-symfony-4-partie-4-le-controleur-et-la-vue %})
+* [Tutorial Jobeet pour Symfony 4 - Partie 4A: Le contrôleur et la vue]({% post_url 2017-09-29-tutorial-jobeet-symfony-4-partie-4a-le-controleur-et-la-vue %})
+* Tutorial Jobeet pour Symfony 4 - Partie 4B: La gestion des assets avec Twig
 * Tutorial Jobeet pour Symfony 4 - Partie 5: Les routes
 * Tutorial Jobeet pour Symfony 4 - Partie 6: Aller plus loin avec le modèle
 * Tutorial Jobeet pour Symfony 4 - Partie 7: Jouons avec la page catégorie

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tutorial Jobeet pour Symfony 4 - Partie 4: Le contrôleur et la vue"
+title: "Tutorial Jobeet pour Symfony 4 - Partie 4A: Le contrôleur et la vue"
 menu: blog
 priority: 0.80
 type: jobeet
