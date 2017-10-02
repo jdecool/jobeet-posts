@@ -186,7 +186,7 @@ doctrine:
                 is_bundle: false
                 type: yml # annotation ou xml
                 dir: '%kernel.project_dir%/config/doctrine/mapping' # configuration du mapping
-                prefix: 'App\Entity\'
+                prefix: 'App\Entity'
                 alias: App
 {% endhighlight %}
 
