@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 2: Le projet"
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Nous avons précédemment créé la structure de notre projet Symfony et préparé

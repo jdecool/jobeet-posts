@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 3A: Le modèle de données"
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Maintenant que l'aspect fonctionnel de notre projet a été défini, nous allons

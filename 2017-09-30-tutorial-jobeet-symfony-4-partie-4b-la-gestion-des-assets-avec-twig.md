@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 4B: La gestion des assets avec T
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Dans la section précédente, nous avons commencé à afficher nos premières pages

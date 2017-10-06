@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 3B: Les données initiales"
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Nous avons donc créé notre base et données avec les tables qui permettront de

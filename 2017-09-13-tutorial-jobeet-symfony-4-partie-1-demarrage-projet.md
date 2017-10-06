@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 1: Démarrage du projet"
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Est-il encore nécessaire de présenter Symfony qui est l'un des frameworks PHP

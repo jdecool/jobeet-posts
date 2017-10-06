@@ -3,6 +3,7 @@ layout: post
 title: Tutorial Jobeet pour Symfony 4 - Introduction
 menu: blog
 priority: 0.80
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 J'ai récemment eu l'occasion de relire des articles concernant *Jobeet*, un 

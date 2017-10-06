@@ -4,6 +4,7 @@ title: "Tutorial Jobeet pour Symfony 4 - Partie 4A: Le contrôleur et la vue"
 menu: blog
 priority: 0.80
 type: jobeet
+github: "https://github.com/jdecool/jobeet-posts"
 ---
 
 Nous avons jusqu'à présent entrevu le fonctionnement de Doctrine en créant une
